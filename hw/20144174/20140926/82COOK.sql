@@ -20,4 +20,5 @@ INSERT INTO 82COOK ( article_id, subject, username, regdate, count, ilike ) VALU
 INSERT INTO 82COOK ( article_id, subject, username, regdate, count, ilike ) VALUES ( '41753', '수다와 소박한 찬장 속 양념들', '시골아낙', '2014.08.27', '4569', '13' );
 
 UPDATE 82COOK SET username='양파엉덩이' WHERE article_id='41767';
+
 DELETE FROM 82COOK WHERE ilike > 10;

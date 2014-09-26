@@ -20,4 +20,5 @@ INSERT INTO SLRCLUB (nid, title, writer, wtime, hit, reply) VALUES ( '32552171',
 insert into SLRCLUB (nid,title,writer,wtime,hit,reply) VALUES(32550336,'아빠의 소개팅 有', 'moonoon','12:16:38','0','424');
 
 update SLRCLUB set wtime='15:15:15' where wtime='15:51:35';
+
 delete from SLRCLUB where writer='gagree';

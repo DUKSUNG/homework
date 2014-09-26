@@ -21,4 +21,5 @@ INSERT INTO PPOMPPU ( numid, title, name, rdate, hit, reply ) VALUES ( '3348392'
 INSERT INTO PPOMPPU ( numid, title, name, rdate, hit, reply ) VALUES ( '2948582', '아이폰이 휘는 이유.jpg', '라지83', '15:09:08', '4598', '82' );
 
 UPDATE PPOMPPU SET hit='2389' WHERE numid='3348392';
+
 DELETE FROM PPOMPPU WHERE name='AuraSs';
