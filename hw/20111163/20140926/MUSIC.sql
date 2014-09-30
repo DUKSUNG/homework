@@ -1,10 +1,10 @@
-use DS_20111163
+use DS_20111163;
 
 create table MUSIC(
 	rank int;
 	title varchar(100);
 	artist varchar(30);
-	good) int;
+	good int;
 );
 
 
