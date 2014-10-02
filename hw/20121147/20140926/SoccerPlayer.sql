@@ -1,5 +1,5 @@
 --20141001
---소제 : 연봉 높은 축구 선수
+--소재 : 연봉 높은 축구 선수
 
 --1.create
 create table SoccerPlayer (CRanking int, CName varchar(255), CTeam varchar(255),CCountry varchar(255), CHeight int, CBirth int, CMoney int);
