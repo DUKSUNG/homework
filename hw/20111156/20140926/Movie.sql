@@ -1,4 +1,4 @@
-create table Movie (제목 varchar(255),관객수 int, 개봉일 int));
+create table Movie (제목 varchar(255),관객수 int, 개봉일 int);
 
 
 insert into Movie(제목,관객수,개봉일) values ('명량', '17598415', '20140730');
