@@ -18,6 +18,6 @@ INSERT into MOVIE (id, title, director) values (5, '오퍼나지', '길예르모
 
 UPDATE MOVIE set title='라푼젤', director='네이슨 그레노' where id=1;
 
-DELETE from MOVIE shere title='라푼젤';
+DELETE from MOVIE where title='라푼젤';
 
 	
