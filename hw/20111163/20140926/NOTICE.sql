@@ -1,7 +1,7 @@
 use DS_20111163;
 
 CREATE TABLE NOTICE(
-	id INT;
+	id INT,
 	separation VARCHAR(50),
 	title VARCHAR(255),
 	writer VARCHAR(50),
