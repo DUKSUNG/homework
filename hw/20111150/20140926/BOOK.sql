@@ -1,8 +1,8 @@
 use DS_20111150;
 
 CREATE TABLE BOOK (
-	num		INT,
-	id		VARCHAR(64),
+	num	INT,
+	id	VARCHAR(64),
 	name	VARCHAR(255),
 	dueback INT
 );
