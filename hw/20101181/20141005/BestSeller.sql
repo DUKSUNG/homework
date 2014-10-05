@@ -1,4 +1,4 @@
-DS_2010111
+DS_20101181
 
 create table BestSeller (subject varchar(255), writer varchar(255), company varchar(255), date varchar(10), cost int);
 
