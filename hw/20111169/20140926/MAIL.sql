@@ -1,0 +1,11 @@
+create table MAIL ( id int, sender varchar(255), title varchar(255), date varchar(255), size float );
+insert into MAIL ( id, sender, title, date, size ) values ( 1, 'Won Joo Yoo', '[덕성IVF] 상태 업데이트', '2014-10-05 20:49', 10.21 );
+insert into MAIL ( id, sender, title, date, size ) values ( 2, 'Facebook', '유빈님, 새 알림 2개 및 콕 찔러보기 2개', '2014-10-03 07:00', 18.47 );
+insert into MAIL ( id, sender, title, date, size ) values ( 2, '문화관광 디자인본부', '디자인서울 뉴스레터 09호', '2014-10-03 00:09', 3.71 );
+delete from MAIL where sender = '문화관광 디자인본부';
+insert into MAIL ( id, sender, title, date, size ) values ( 3, '문화관광 디자인본부', '디자인서울 뉴스레터 09호', '2014-10-03 00:09', 3.71 );
+insert into MAIL ( id, sender, title, date, size ) values ( 4, '반디앤루니스', '[반디앤루니스]주문상품이 출고되었습니다.', '2014-10-02 09:45', 18.95 );
+insert into MAIL ( id, sender, title, date, size ) values ( 5, '라이엇게임즈', '[리그 오브 레전드] 개인정보 이용 내역 안내', '2014-10-01 14:13', 20.96 );
+insert into MAIL ( id, sender, title, date, size ) values ( 6, '서울시립미술관', '[SeMA e-뉴스] 105호', '2014-09-30 21:24', 14.02 );
+update MAIL set sender = '유원주' where id = 1;
+delete from MAIL where sender = '라이엇게임즈';
