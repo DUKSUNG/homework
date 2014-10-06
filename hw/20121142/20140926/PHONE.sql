@@ -8,7 +8,7 @@ insert into PHONE(spec, galaxy_note3, iphone6, G3) values('배터리','3200mAh',
 insert into PHONE(spec, galaxy_note3, iphone6, G3) values('RAM','3기가','1기가','3기가');
 insert into PHONE(spec, galaxy_note3, iphone6, G3) values('나의 평가','지금폰이다.최신폰에 뒤지지않는 스펙에 매우만족한다.','카메라가 너무잘찍혀서 사고싶었는데 화소가 높지않은점에 놀랐다.스펙도 많이 딸리는 듯?','노트3랑 스펙은 비슷한거같다.디자인은 더 낫지만 크기가 어마어마했다.');
 
-update PHONE set spec='카메라(전/후면)' where spec='카메라';
+update PHONE set spec='카메라(전/후면)' where G3='1300/210';
 delete from PHONE where spec='나의 평가';
 
 
