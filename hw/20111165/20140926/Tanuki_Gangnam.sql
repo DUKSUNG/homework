@@ -23,7 +23,7 @@ insert into Tanuki_Gangnam(No, MarketTypes, Menu, Price, Sales) values('12','주
 select *from Tanuki_Gangnam order by MarketTypes, Sales desc;
 
 --3.update
-update Tanuki_Gangnam set Sales ='42';
+update Tanuki_Gangnam set Sales ='42' where No='1';
 
 --4.delete
 delete from Tanuki_Gangnam where No='12';
