@@ -6,11 +6,10 @@ insert into TVPG(day, name, channel, time, genre) values('월', '연애의 발�
 insert into TVPG(day, name, channel, time, genre) values('화', '비밀의 문', 'SBS', '22:00', '드라마');
 insert into TVPG(day, name, channel, time, genre) values('수', '아빠어디가', 'KBS1', '23:45', '예능');
 insert into TVPG(day, name, channel, time, genre) values('목', '해피투게더', 'KBS2', '23:00', '예능');
-insert into TVPG(day, name, channel, time, genre) values('금', '슈퍼스타K6', 'MNET', '23:10', '예능');
+insert into TVPG(day, name, channel, time, genre) values('금', '슈퍼스타K6', 'MNET', '23:10', '오디션');
 insert into TVPG(day, name, channel, time, genre) values('토', '테이스티 로드', 'Olive', '12:00', '음식');
 
 update TVPG set name='라디오 스타', channel='MBC' where day='수';
 
 delete from TVPG where channel='Olive';
-
 
