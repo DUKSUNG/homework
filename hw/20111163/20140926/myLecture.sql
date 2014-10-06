@@ -17,4 +17,3 @@ insert into myLecture(Division, comDivision,subject,professor) values('학부','
 
 update myLecture set professor='이러닝' where professor='';
 delete from myLecture where subject='디지털미디어프로젝트2';
-

@@ -21,5 +21,4 @@ insert into NOTICE (id, separation, title, writer, time, hit) values (11853, '�
 insert into NOTICE (id, separation, title, writer, time, hit) values (11849, '취업', '한국생산성본부 인턴 채용', '여대생커리어개발센터','2014-09-23',580);
 
 update NOTICE set writer='총무과' where id=11849;
-
 delete from NOTICE where writer='홍보실';
