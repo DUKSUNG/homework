@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#*-* coding: UTF8 -*-
+#*-* coding: UTF-8 -*-
 
 print "create table STAR (id int, name varchar(255), age int, gender varchar(1), height int(11));
 
