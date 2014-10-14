@@ -3,7 +3,7 @@
 +//1.create
 +create table myplaylist (sort int, title varchar(255), singer varchar(255), album varchar(255);
 +//2.insert
-+insert into myplaylist (sort,title,singer,album) values (1,'공허해','winner','정규앨범 2014 S/S);
++insert into myplaylist (sort,title,singer,album) values (1,'공허해','winner','정규앨범 2014 S/S');
 +insert into myplaylist (sort,title,singer,album) values (2,'사랑이 찾아오면','커피소년','커피소년 첫번째 음악 로스팅');
 +insert into myplaylist (sort,title,singer,album) values (3,'멀어지다','넬','정규앨범 Separation Avxiety');
 +insert into myplaylist (sort,title,singer,album) values (4,'금요일에 만나요','아이유','Modern Times-Epilogue');
