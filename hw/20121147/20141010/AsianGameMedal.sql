@@ -18,4 +18,4 @@ update AsianGameMedal set AGName='몽골' where AGRanking=5;
 delete from AsianGameMedal where AGRanking=5;
 
 
---마지막수정 : 20141014
+--마지막수정 : 20141015

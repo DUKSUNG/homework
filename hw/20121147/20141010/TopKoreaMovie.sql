@@ -17,4 +17,4 @@ update TopKoreaMovie set MName='7번방의선물' where MRanking=3;
 --4.delete
 delete from TopKoreaMovie where MRanking=5;
 
---마지막 수정 : 20141013
+--마지막 수정 : 20141015
