@@ -1,1 +1,10 @@
-이걸 test_2로 옮기겠다!!
+합계 12
+drwxr-xr-x 2 20121153 students 4096 10월 16 01:18 .
+drwxr-xr-x 5 20121153 students 4096 10월 16 00:47 ..
+-rw-r--r-- 1 20121153 students    0 10월 16 01:18 hello.txt
+-rw-r--r-- 1 20121153 students  141 10월 16 00:37 hello4.txt
+합계 16
+drwxr-xr-x 2 20121153 students 4096 10월 16 01:18 .
+drwxr-xr-x 5 20121153 students 4096 10월 16 00:47 ..
+-rw-r--r-- 1 20121153 students  240 10월 16 01:18 hello.txt
+-rw-r--r-- 1 20121153 students  141 10월 16 00:37 hello4.txt
