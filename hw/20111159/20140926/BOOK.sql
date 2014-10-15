@@ -1,12 +1,12 @@
-use DB_20111159;
+use DS_20111159;
 
 CREATE TABLE BOOK (
-	id INT NOT NULL, --순서
-	title VARCHAR(255) NOT NULL, --제목
-	writer VARCHAR(63) NOT NULL, --작가
-	publisher VARCHAR(63) NOT NULL, --출판사
-	publishingyear INT NOT NULL, --출판년도
-	cost INT NOT NULL, --가격
+	id INT NOT NULL,
+	title VARCHAR(255) NOT NULL,
+	writer VARCHAR(63) NOT NULL,
+	publisher VARCHAR(63) NOT NULL,
+	publishingyear INT, 
+	cost INT
 );
 
 INSERT into BOOK (id, title, writer, publisher, publishingyear, cost) values (1, '낙서 마스터', '요지후리 분페이', '디자인이음', '2011', '13000');
