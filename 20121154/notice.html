@@ -1,0 +1,669 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title>공지사항</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<link rel="stylesheet" type="text/css" href="/css/plaza.css" />
+<script type="text/javascript" src="/js/front_js.js"></script>
+<script  type="text/javascript" >
+<!--
+    /* 검색 */
+    function goSearchNotice() {
+        if( board.keyword.value == "" ) {
+            alert("검색어를 입력하세요");
+            board.keyword.focus();
+            return;
+        }
+
+        board.cpage.value = "0";
+        board.target      = "_self";
+        board.action      = "notice_list.jsp";
+        board.submit();
+    }
+
+    /* 목록 페이지로 이동 */
+    function goList() {
+        board.cpage.value        = "";
+        //board.searchTarget.value = "";
+        //board.keyword.value      = "";
+
+        board.target ="_self";
+        board.action = "notice_list.jsp";
+        board.submit();
+    }
+
+    /* 쓰기 페이지로 이동 */
+    function goWriteForm() {
+        board.target = "_self";
+        board.action = "notice_write.jsp";
+        board.submit();
+    }
+
+    /* 읽기 페이지로 이동 */
+    function goDisplay(idx) {
+        board.idx.value = idx;
+        board.target    = "_self";
+        board.action    = "notice_read.jsp";
+        board.submit();
+    }
+
+    /* page 이동 */
+    function goPage( page ) {
+        board.cpage.value = page;
+        board.target      = "_self";
+        board.action      = "notice_list.jsp";
+        board.submit();
+    }
+
+    /* 콤보박스 변경에 따른 목록 출력 */
+    function comboChange() {
+        board.cpage.value = "0";
+        board.action = "notice_list.jsp";
+        board.submit();
+    }
+
+    function fileDown(fileName, fileMaskName) {
+        board.downFileName.value = fileName;
+        board.fileMaskName.value = fileMaskName;
+        
+        board.action="/common/jsp/download.jsp";
+        board.submit();
+    }
+
+//-->
+</script>
+</head>
+
+<body>
+	<ul id="pageLink">
+		<li><a href="#gnbMenu">주메뉴</a></li>
+		<li><a href="#localMenu">서브메뉴</a></li>
+		<li><a href="#contents">컨텐츠</a></li>
+		<li><a href="#dFoot">하단</a></li>
+	</ul>
+	<hr />
+
+	<!-- 상단 공통 -->
+		 
+ 
+
+
+
+
+
+ 
+<script type="text/javascript" src="/common/js/common.js"></script>
+<script type="text/javascript">
+    function goSearch() {
+        frm = document.search;
+        if(frm.keyword.value == "") {
+            alert("검색어를 입력해 주세요");
+            frm.keyword.focus();
+			return;
+        }
+        else {
+            frm.cpage.value = "0";
+            frm.action = "/search/index.jsp";
+            frm.target = "_blank";
+            frm.submit();
+        }
+    }  
+</script>
+	<div id="dHead">
+		<p class="logo"><a href="/"><img src="/images/common/logo.png" alt="덕성여자대학교" class="png24" /></a></p>
+		<ul class="utility">
+			<li><a href="/"><img src="/images/common/util_home.png" alt="home" class="png24" /></a></li>
+			<li><a href="/eng/index.jsp"><img src="/images/common/util_english.png" alt="english" class="png24" /></a></li>
+			<li><a href="http://mail.duksung.ac.kr/" target="_blank" title="새 창으로 이동"><img src="/images/common/util_webmail.png" alt="웹메일" class="png24" /></a></li>
+			<!-- <li><a href="/popup_info.jsp" onkeypress="" onclick="openWin(this.href,'popContainer');return false;"><img src="/images/common/util_memberinfo.png" alt="memberinfo" class="png24" /></a></li> -->
+			
+			<li><a href="/etc/login_form.jsp"><img src="/images/common/util_login.png" alt="로그인" class="png24" /></a></li>
+			
+
+		</ul>
+		<form name="search" method="post" action="/search/index.jsp" target="search">
+		<input type="hidden" name="searchType" value="ALL" title="검색 조건"/>
+		<input type="hidden" name="cpage" title="페이지 수"/>
+		<fieldset class="search">
+			<legend>통합검색</legend>
+			<label for="searchForm">검색폼</label>
+			<span><input type="text" id="searchForm" class="input-text" name="keyword"/></span>
+			<input type="image" src="/images/btn/btn_searchf.gif" alt="search" />
+		</fieldset>
+		</form>
+		  
+		<div  id="gnbMenu">
+			<ul>
+				<li><a href="http://www.duksung.ac.kr/about/about_01.jsp" ><img src="/images/common/gnb_1_off.gif" alt="덕성안내" /></a></li>
+				<li><a href="http://enter.duksung.ac.kr/" target="IPAK" title="입학홈페이지 새창으로 열림"><img src="/images/common/gnb_2_off.gif" alt="입학안내" /></a></li>
+				<li><a href="http://www.duksung.ac.kr/academics/academics.jsp"><img src="/images/common/gnb_3_off.gif" alt="대학대학원" /></a></li>
+				<li><a href="http://www.duksung.ac.kr/org/administration/index.jsp?deptCode=C3001002"><img src="/images/common/gnb_4_off.gif" alt="대학기관" /></a></li>
+				<li><a href="http://www.duksung.ac.kr/info/schedule/index.jsp"><img src="/images/common/gnb_5_off.gif" alt="학사안내" /></a></li>
+				<li><a href="/scholarship/schedule/index.jsp"><img src="/images/common/gnb_10_on.gif" alt="장학 안내" /></a></li>			
+				<li><a href="http://www.duksung.ac.kr/life/life_01.jsp"><img src="/images/common/gnb_6_off.gif" alt="대학생활" /></a></li>
+				<li><a href="http://www.duksung.ac.kr/media/media_01.jsp"><img src="/images/common/gnb_7_off.gif" alt="덕성미디어" /></a></li>
+				<li><a href="http://www.duksung.ac.kr/news/notice_list.jsp?boardFlag=0"><img src="/images/common/gnb_8_off.gif" alt="덕성마당" /></a></li>
+			</ul>
+		</div>
+		<p class="all-view"><a href="#menuAll" onclick="document.getElementById('totalv-list').style.display='block';" id="totalBtn" title="전체 메뉴보기"><img src="/images/btn/btn_all.gif" alt="전체메뉴" /></a></p>
+		<div id="totalv-list">
+			<ul id="overMotion" >
+				<li style='display:block;'>
+					<ul class="depth2-1">
+						<li><a href="http://www.duksung.ac.kr/about/about_01.jsp"><img src="/images/common/gnb_1_1_off.gif" alt="총장실" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_02.jsp"><img src="/images/common/gnb_1_2_off.gif" alt="이념과비전" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_03.jsp"><img src="/images/common/gnb_1_3_off.gif" alt="덕성상징" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_04.jsp"><img src="/images/common/gnb_1_4_off.gif" alt="덕성발자취" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_05.jsp"><img src="/images/common/gnb_1_5_off.gif" alt="학교현황" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_06_02.jsp"><img src="/images/common/gnb_1_6_off.gif" alt="캠퍼스안내" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/about/about_07.jsp"><img src="/images/common/gnb_1_7_off.gif" alt="학교법인덕성학원" /></a></li>
+					</ul>
+				</li>
+
+				<li>
+					<ul class="depth2-3">
+						<li><a href="http://www.duksung.ac.kr/academics/academics.jsp"><img src="/images/common/gnb_3_1_off.gif" alt="대학" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/academics/graduate/index.jsp?deptCode=C2001001"><img src="/images/common/gnb_3_2_off.gif" alt="대학원" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="depth2-4">
+						<li><a href="http://www.duksung.ac.kr/org/administration/index.jsp?deptCode=C3001001"><img src="/images/common/gnb_4_1_off.gif" alt="행정부서" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/org/sub_org/index.jsp?deptCode=C6001001"><img src="/images/common/gnb_4_2_off.gif" alt="부속기관" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/org/sub_org/index.jsp?deptCode=C5001001"><img src="/images/common/gnb_4_3_off.gif" alt="부설연구소" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/org/org_04.jsp"><img src="/images/common/gnb_4_4_off.gif" alt="부속교육기관" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/org/org_05.jsp"><img src="/images/common/gnb_4_5_off.gif" alt="산학협력단" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="depth2-5">
+						<li><a href="http://www.duksung.ac.kr/info/schedule/index.jsp"><img src="/images/common/gnb_5_1_off.gif" alt="학사일정" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_02.jsp"><img src="/images/common/gnb_5_2_off.gif" alt="학칙규정" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_03.jsp"><img src="/images/common/gnb_5_3_off.gif" alt="학사정보" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_04.jsp"><img src="/images/common/gnb_5_4_off.gif" alt="증명서발급" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_05.jsp"><img src="/images/common/gnb_5_5_off.gif" alt="학사서식자료" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_06.jsp"><img src="/images/common/gnb_5_6_off.gif" alt="장학제도" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/info/info_07.jsp"><img src="/images/common/gnb_5_7_off.gif" alt="강의우수교원 명예의전당" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="depth2-9">
+						<li><a href="/scholarship/schedule/index.jsp"><img src="/images/common/gnb_10_4_off.gif" alt="공지사항" /></a></li>
+						<li><a href="/scholarship/scholar_03_01.jsp"><img src="/images/common/gnb_10_3_off.gif" alt="장학제도" /></a></li>
+						<li><a href="/board/container_board_view.jsp?boardId=216"><img src="/images/common/gnb_10_5_off.gif" alt="자료실" /></a></li>
+						<!--li><a href="/scholarship/scholar_01.jsp"><img src="/images/common/gnb_10_1_off.gif" alt="장학기금 현황" /></a></li-->
+						<li><a href="/scholarship/scholar_01_02.jsp"><img src="/images/common/gnb_10_2_off.gif" alt="장학기금 현황" /></a></li>
+					</ul>
+				</li>				
+				<li>
+					<ul class="depth2-6">
+						<li><a href="http://www.duksung.ac.kr/life/life_01.jsp"><img src="/images/common/gnb_6_1_off.gif" alt="학생서비스센터" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/life/life_02.jsp"><img src="/images/common/gnb_6_2_off.gif" alt="국제교류" /></a></li>
+						<li><a href="http://job.duksung.ac.kr/" target="_job" title="취업지원홈페이지 새창으로 열림"><img src="/images/common/gnb_6_3_off.gif" alt="취업지원" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/life/life_04.jsp"><img src="/images/common/gnb_6_4_off.gif" alt="동아리소개" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/life/life_05.jsp"><img src="/images/common/gnb_6_5_off.gif" alt="복지시설" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/life/life_06.jsp"><img src="/images/common/gnb_6_6_off.gif" alt="오늘의식단" /></a></li>
+						<li><a href="http://203.252.220.44/Domian.asp" title="열람실 좌석현황 새창으로 열림"><img src="/images/common/gnb_6_7_off.gif" alt="열람실 좌석현황" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="depth2-7">
+						<li><a href="http://www.duksung.ac.kr/media/media_01.jsp"><img src="/images/common/gnb_7_1_off.gif" alt="홍보이야기" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/media/webzine/?id=weekly"><img src="/images/common/gnb_7_2_off.gif" alt="덕성웹진" /></a></li>
+						<!--li><a href="http://www.duksung.ac.kr/media/media_03.jsp"><img src="/images/common/gnb_7_3_off.gif" alt="대학출판물" /></a></li-->
+						<li><a href="http://www.duksung.ac.kr/media/media_04.jsp"><img src="/images/common/gnb_7_4_off.gif" alt="언론속의 덕성" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/media/media_05.jsp"><img src="/images/common/gnb_7_5_off.gif" alt="대학관련소식" /></a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="depth2-8">
+						<li><a href="http://www.duksung.ac.kr/news/notice_list.jsp?boardFlag=0"><img src="/images/common/gnb_8_1_off.gif" alt="알림마당" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=48"><img src="/images/common/gnb_8_2_off.gif" alt="덕성서비스" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=171"><img src="/images/common/gnb_8_3_off.gif" alt="커뮤니티" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=159"><img src="/images/common/gnb_8_4_off.gif" alt="자료마당" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=60"><img src="/images/common/gnb_8_5_off.gif" alt="교직원마당" /></a></li>
+					</ul>
+				</li>
+				
+			</ul>
+			<img src="/images/common/bg_lnb_new.png" class="png24 back" alt="" />
+			<p class="btn-close"><a href="#menuAll" onclick="document.getElementById('totalv-list').style.display='none';" id="totalvClose"><img src="/images/btn/btn_layerClose_new.gif" alt="닫기" /></a></p>
+		</div>
+		<script type="text/javascript">
+				$(document).ready(function(){$("#totalBtn").click(function(){loadPopup();}); $("#totalvClose").click(function(){disablePopup();});});
+			</script>
+		<script type="text/javascript">imgMenuOver("overMotion");</script>
+	</div>
+		<script type="text/javascript">initNavigation("8");</script>
+	<hr />
+	<!-- //상단 공통 -->
+
+	<!-- body -->
+	<div id="dBody">
+		 
+
+
+<div id="localMenu">
+			<h1><img src="/images/plaza/tit_h1.gif" alt="덕성마당 " /></h1>
+			<ul>
+				<li class="first-child"><a href="http://www.duksung.ac.kr/news/notice_list.jsp?boardFlag=0"><img src="/images/plaza/lnb_1_on.gif" alt="알림마당" /></a>
+					<ul style='display:block;'>
+						<li class="on"><a href="http://www.duksung.ac.kr/news/notice_list.jsp?boardFlag=0"><img src="/images/plaza/lnb_1_1_on.gif" alt="공지사항" /></a></li>
+						<!--li><a href="/news/notice_list.jsp?boardFlag=0"><img src="/images/plaza/lnb_1_2_off.gif" alt="학사정보" /></a></li-->
+						<li><a href="http://www.duksung.ac.kr/news/notice_list.jsp?boardFlag=1"><img src="/images/plaza/lnb_1_3_off.gif" alt="덕성뉴스" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=62"><img src="/images/plaza/lnb_1_4_off.gif" alt="입찰·채용" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=194"><img src="/images/plaza/lnb_1_5_off.gif" alt="자원봉사 모집" /></a></li>						
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=196"><img src="/images/plaza/lnb_1_6_off.gif" alt="UN Women" /></a></li>						
+						
+					</ul>
+				</li>
+				<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=48"><img src="/images/plaza/lnb_2_off.gif" alt="덕성서비스" /></a>
+					<ul >
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=48"><img src="/images/plaza/lnb_2_1_off.gif" alt="건의합니다" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=50"><img src="/images/plaza/lnb_2_2_off.gif" alt="분실물" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=46"><img src="/images/plaza/lnb_2_3_off.gif" alt="faq" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=47"><img src="/images/plaza/lnb_2_4_off.gif" alt="q&amp;a" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=193"><img src="/images/plaza/lnb_2_5_off.gif" alt="덕성PR 아이디어" /></a></li>						
+					</ul>
+				</li>
+				<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=171"><img src="/images/plaza/lnb_3_off.gif" alt="커뮤니티" /></a>
+					<ul >
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=171"><img src="/images/plaza/lnb_3_1_off.gif" alt="자유게시판" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=197"><img src="/images/plaza/lnb_3_11_off.gif" alt="학과커뮤니티" /></a></li>
+
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=83"><img src="/images/plaza/lnb_3_2_off.gif" alt="강의정보" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=55"><img src="/images/plaza/lnb_3_3_off.gif" alt="벼룩시장" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=56"><img src="/images/plaza/lnb_3_4_off.gif" alt="하숙자취" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=156"><img src="/images/plaza/lnb_3_5_off1.gif" alt="나눔텃밭 이야기" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=116"><img src="/images/plaza/lnb_3_6_off.gif" alt="조교채용" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=158"><img src="/images/plaza/lnb_3_7_off.gif" alt="아르바이트" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=57"><img src="/images/plaza/lnb_3_8_off.gif" alt="문화예술정보" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=58"><img src="/images/plaza/lnb_3_9_off.gif" alt="포토갤러리" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/plaza/poll2/index.jsp"><img src="/images/plaza/lnb_3_10_off.gif" alt="설문조사" /></a></li>
+						<!--li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=217"><img src="/images/plaza/lnb_3_122_off.gif" alt="모의수강신청 게시판" /></a></li-->
+
+					</ul>
+				</li>
+				<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=159"><img src="/images/plaza/lnb_4_off.gif" alt="자료마당" /></a>
+					<ul >
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=159"><img src="/images/plaza/lnb_4_1_off.gif" alt="학사서식자료" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=160"><img src="/images/plaza/lnb_4_2_off.gif" alt="일반자료" /></a></li>
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=173"><img src="/images/plaza/lnb_4_3_off.gif" alt="졸업식사진" /></a></li>						
+					</ul>
+				</li>
+				<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=60"><img src="/images/plaza/lnb_5_off.gif" alt="교직원마당" /></a>
+					<ul >
+						<li><a href="http://www.duksung.ac.kr/board/container_board_view.jsp?boardId=60"><img src="/images/plaza/lnb_5_1_off.gif" alt="교직원게시판" /></a></li>
+						<!--li><a href="/board/container_board_view.jsp?boardId=115"><img src="/images/plaza/lnb_5_2_off.gif" alt="발전전략게시판" /></a></li-->
+						<!-- <li><a href="/plaza/plaza_05_03.jsp"><img src="/images/plaza/lnb_5_3_off.gif" alt="등기우편물 소포" /></a></li> -->
+						<li><a href="http://www.duksung.ac.kr/plaza/builder/index.jsp"><img src="/images/plaza/lnb_5_4_off.gif" alt="홈페이지 빌더" /></a></li>
+					</ul>
+				</li>
+			</ul>
+			<script type="text/javascript">imgMenuOver("localMenu");</script>
+		</div>
+		<hr />
+
+		<!-- contents S -->
+		<div id="contents">
+			<p class="location">
+				HOME > 덕성마당 > 알림마당 > 공지사항&nbsp;&nbsp;&nbsp;
+				<a href="javascript:PagePrint();" title="새창으로 열림"><img src="/images/btn/btn_print.gif" alt="print" /></a>
+				<!--a href="javascript:PagePrint();" title="새창으로 열림"><img src="/images/btn/btn_print.gif" alt="print" class="print"/></a-->
+
+</p>
+			<h2><img src="/images/plaza/tit_h2_01011.gif" alt="공지사항"  /></h2>
+<form name="board" method="post" style="display:inline" action="">
+  <input type="hidden" name="boardFlag" value="0" />
+  <input type="hidden" name="cpage"     value="0" />
+  <input type="hidden" name="idx"                                />
+  <!-- ============== 첨부파일 관련 ================ --> 
+  <input type="hidden" name="downFileName"                                 />
+  <input type="hidden" name="fileMaskName"                                 />			
+			<fieldset class="board-search">
+				<legend>게시판 내 검색</legend>
+				<label for="selTypeca">카테고리를 선택</label>
+	<!-- ==== 카테고리 사용시 콤보박스 처리 ==== -->
+				<span id="bbs_cate" style="float:left">
+			
+				<select name="category" id="selTypeca">
+			<option value="ALL">::::: 전체 :::::</option>
+				 
+					<option value='B3001001'  >학사안내</option>
+				  	<option value='B3001011'  >장학안내</option>
+				  	<option value='B3001002'  >행사안내</option>
+				  	<option value='B3001003'  >산학/연구</option>
+				  	<option value='B3001005'  >취업</option>
+				  	<option value='B3001004'  >기타</option>
+			  
+				</select>
+								
+				</span>
+
+				<span id="bbs_search" style="float:right;">
+				<label for="selType">선택</label>
+				<select name="searchTarget" id="selType">
+					<option value="SUBJECT"   >제목</option>
+	                <option value="CONTENTS"  >내용</option>
+				</select>
+				<label for="selWord">검색어</label><input type="text" value="" name="keyword" id="selWord"  class="input-text" />
+				<a href="javascript:goList();"><img src="/images/btn/btn_search.gif" align="absmiddle" border="0" alt="조회"/></a>
+				<!--input type="image" alt="조회" src="/images/btn/btn_search.gif" class="input-search" /--> 
+				</span>
+			</fieldset>
+			
+			<table class="board-list" summary="공지사항 관한 정보를 제공하는 표로  번호, 구분, 제목, 첨부파일, 작성자, 작성일, 조회 관련 정보" cellpadding="0" cellspacing="0">
+				<caption>공지사항 게시판</caption>
+				<colgroup>
+					<col width="%" />
+					<col width="%" />
+					<col width="*" />
+					<col width="%" />
+					<col width="%" />
+					<col width="%" />
+					<col width="%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col" class="num"><img src="/images/table/th_num.gif" alt="번호" /></th>
+					<th scope="col"><img src="/images/table/th_part.gif" alt="구분" /></th>
+					<th scope="col"><img src="/images/table/th_title.gif" alt="제목" /></th>
+					<th scope="col"><img src="/images/table/th_file.gif" alt="첨부파일" /></th>
+					<th scope="col"><img src="/images/table/th_ahor.gif" alt="작성자" /></th>
+					<th scope="col"><img src="/images/table/th_date.gif" alt="작성일" /></th>
+					<th scope="col"><img src="/images/table/th_hit.gif" alt="조회" /></th>
+					
+				</tr>
+				</thead>
+				<tbody>
+				
+				<tr>
+					<td class="num">&nbsp;11926&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17663');" title="[도서관]독서퀴즈 이벤트">[도서관]독서퀴즈 이벤트</a></td>
+					<td>
+					
+					            <!--a href="javascript:fileDown('독서퀴즈이벤트도서목록.xls','/upload/notice/');"><img src="/images/icon/xls.gif" alt="독서퀴즈이벤트도서목록.xls"/></a--><img src="/images/icon/xls.gif" alt="독서퀴즈이벤트도서목록.xls"/>
+					
+					
+					</td>
+					<td >&nbsp;도서관&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;32&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11925&nbsp;</td>
+					<td>&nbsp;산학/연구&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17659');" title="[한국연구재단] 한국연구재단 PM(인문학단장) 초빙 공모">[한국연구재단] 한국연구재단 PM(인문학단장) 초빙..</a></td>
+					<td>
+					
+					            <!--a href="javascript:fileDown('141008_PM(인문학단장)_초빙_공고문.hwp','/upload/notice/');"><img src="/images/icon/hwp.gif" alt="141008_PM(인문학단장)_초빙_공고문.hwp"/></a--><img src="/images/icon/hwp.gif" alt="141008_PM(인문학단장)_초빙_공고문.hwp"/>
+					
+					
+					</td>
+					<td >&nbsp;산학협력과&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;13&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11924&nbsp;</td>
+					<td>&nbsp;취업&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17655');" title="[교내]두드림해드림커리어워크샵(선착순마감)">[교내]두드림해드림커리어워크샵(선착순마감)</a></td>
+					<td>
+					
+								&nbsp;
+					
+					
+					</td>
+					<td >&nbsp;여대생커리어개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;86&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11923&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17654');" title="2014-2 ‘협동모둠학습´ 모둠장 간담회 ">2014-2 ‘협동모둠학습´ 모둠장 간담회 </a></td>
+					<td>
+					
+					            <!--a href="javascript:fileDown('‘협동모둠학습’ 모둠장 간담회 참가여부 확인서 2014_2.hwp','/upload/notice/');"><img src="/images/icon/hwp.gif" alt="‘협동모둠학습’ 모둠장 간담회 참가여부 확인서 2014_2.hwp"/></a--><img src="/images/icon/hwp.gif" alt="‘협동모둠학습’ 모둠장 간담회 참가여부 확인서 2014_2.hwp"/>
+					
+					
+					</td>
+					<td >&nbsp;교수학습개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;32&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11922&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17653');" title="2014-2 ‘덕성 튜터링’ 튜터 간담회">2014-2 ‘덕성 튜터링’ 튜터 간담회</a></td>
+					<td>
+					
+					            <!--a href="javascript:fileDown('덕성튜터링 간담회 참가여부 확인서 14-2.hwp','/upload/notice/');"><img src="/images/icon/hwp.gif" alt="덕성튜터링 간담회 참가여부 확인서 14-2.hwp"/></a--><img src="/images/icon/hwp.gif" alt="덕성튜터링 간담회 참가여부 확인서 14-2.hwp"/>
+					
+					
+					</td>
+					<td >&nbsp;교수학습개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;23&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11921&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17652');" title="2014-2 ‘글로벌 튜터링’ 튜터 간담회">2014-2 ‘글로벌 튜터링’ 튜터 간담회</a></td>
+					<td>
+					
+								&nbsp;
+					
+					
+					</td>
+					<td >&nbsp;교수학습개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;5&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11920&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17651');" title="2014-2 ‘하나 튜터링’ 튜터 간담회 ">2014-2 ‘하나 튜터링’ 튜터 간담회 </a></td>
+					<td>
+					
+								&nbsp;
+					
+					
+					</td>
+					<td >&nbsp;교수학습개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;8&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11919&nbsp;</td>
+					<td>&nbsp;기타&nbsp;</td>
+					<td class="title">
+					<img src="../images/icon/ico_new.gif" border="0" alt="새글"/><a href="javascript:goDisplay('17649');" title="중간고사 기간 중 휘트니스센터 샤워실 이용안내">중간고사 기간 중 휘트니스센터 샤워실 이용안내</a></td>
+					<td>
+					
+								&nbsp;
+					
+					
+					</td>
+					<td >&nbsp;총무과&nbsp;</td>
+					<td>&nbsp;2014-10-17&nbsp;</td>
+					<td>&nbsp;44&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11918&nbsp;</td>
+					<td>&nbsp;취업&nbsp;</td>
+					<td class="title">
+					<a href="javascript:goDisplay('17648');" title="11-12월 DHL KOREA 덕성 인턴십 안내 ">11-12월 DHL KOREA 덕성 인턴십 안내 </a></td>
+					<td>
+					
+					            <!--a href="javascript:fileDown('기본필수작성양식(노동부양식).hwp','/upload/notice/');"><img src="/images/icon/hwp.gif" alt="기본필수작성양식(노동부양식).hwp"/></a--><img src="/images/icon/hwp.gif" alt="기본필수작성양식(노동부양식).hwp"/>
+					
+					
+					</td>
+					<td >&nbsp;여대생커리어개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-16&nbsp;</td>
+					<td>&nbsp;382&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td class="num">&nbsp;11917&nbsp;</td>
+					<td>&nbsp;취업&nbsp;</td>
+					<td class="title">
+					<a href="javascript:goDisplay('17647');" title="매경TEST시험안내[11.15(토)]">매경TEST시험안내[11.15(토)]</a></td>
+					<td>
+					
+								&nbsp;
+					
+					
+					</td>
+					<td >&nbsp;여대생커리어개발센터&nbsp;</td>
+					<td>&nbsp;2014-10-16&nbsp;</td>
+					<td>&nbsp;81&nbsp;</td>
+				</tr>
+
+				
+				</tbody>
+			</table>
+			<div class="paging">
+				<div class="page-num">
+					<span>1</span> / 1193 page
+				</div>
+				<span style="FILTER: progid:DXImageTransform.Microsoft.Alpha( style=0,opacity=10);"><img src="/images/btn/btn_first.gif" border="0" alt="처음페이지"/> 
+</span><span style="FILTER: progid:DXImageTransform.Microsoft.Alpha( style=0,opacity=10);"><img src="/images/btn/btn_prev.gif" border="0" alt="이전페이지"/> 
+</span><ul><li><font color="#FA7800"><strong>1</strong></font></li> 
+<li><a href="javascript:goPage(1);">2</a></li> 
+<li><a href="javascript:goPage(2);">3</a></li> 
+<li><a href="javascript:goPage(3);">4</a></li> 
+<li><a href="javascript:goPage(4);">5</a></li> 
+<li><a href="javascript:goPage(5);">6</a></li> 
+<li><a href="javascript:goPage(6);">7</a></li> 
+<li><a href="javascript:goPage(7);">8</a></li> 
+<li><a href="javascript:goPage(8);">9</a></li> 
+<li><a href="javascript:goPage(9);">10</a></li> 
+</ul><a href="javascript:goPage(10);"><img src="/images/btn/btn_next.gif" border="0" alt="다음페이지"/></a> 
+<a href="javascript:goPage(1192);"><img src="/images/btn/btn_last.gif" border="0" alt="마지막페이지"/></a> 
+
+				<!-- 
+				<a href="맨처음" class="first"><img src="/images/btn/btn_first.gif" alt="맨처음" /></a> 
+				<a href="이전" class="prev"><img src="/images/btn/btn_prev.gif" alt="이전" /></a>
+				<ul>
+					<li><strong><a href="">1</a></strong></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<a href="다음" class="next"><img src="/images/btn/btn_next.gif" alt="다음" /></a>
+				<a href="맨 마지막" class="last"><img src="/images/btn/btn_last.gif" alt="맨 마지막" /></a>
+				 -->
+			</div>	
+			
+</form>
+			  
+    	
+    	
+        
+        
+        
+        
+
+	<div id="quickMenu">
+		<ul>
+			<li class="first-child"><img src="/images/common/bg_quickT.gif" alt="QUICK"></li>
+			<li><a href="http://ptl.duksung.ac.kr/intranet/index.jsp" target="PORTAL"  title="새창으로 열림"><img src="/images/common/quick_01.gif" alt="덕성포털" /></a></li>
+			<li><a href="http://portal.duksung.ac.kr:7779/pls/portal/PORTAL.wwsec_app_priv.login?p_requested_url=https://epp.duksung.ac.kr/irj/portal&amp;p_cancel_url=https://epp.duksung.ac.kr/irj/portal" target="_EP" title="새창으로 열림"><img src="/images/common/quick_02.gif" alt="행정포털" /></a></li>
+			<li><a href="http://discover.duksung.ac.kr" target="_discover" title="새창으로 열림"><img src="/images/common/quick_03.gif" alt="도서관" /></a></li>
+			<li><a href="/info/info_04.jsp"><img src="/images/common/quick_04.gif" alt="증명서 발급" /></a></li>
+			<li><a href="/info/schedule/index.jsp"><img src="/images/common/quick_05.gif" alt="학사일정" /></a></li>
+			<li><a href="http://job.duksung.ac.kr" target="_job" title="취업정보 홈페이지 새창으로 열림"><img src="/images/common/quick_06.gif" alt="취업정보" /></a></li>
+		</ul>
+		<a href="#dHead" class="top"  ><img src="/images/btn/btn_top.gif" alt="페이지 위로" /></a>
+		<script type="text/javascript">$(document).ready(function(){bScroll();});</script>
+	</div>
+
+	
+
+		</div>
+		<!-- contents E -->
+
+	</div>
+	<hr />
+	<!-- //body -->
+
+
+	<!-- 하단 -->
+	 
+<div id="dFoot">
+		<h2>하단 정보</h2>
+		<ul class="foot-menu">
+			<li class="first-child"><a href="/siteinfo/site_01.jsp"><img src="/images/main/foot_m10.gif" alt="개인정보처리방침" /></a></li>
+			<li><a href="/siteinfo/site_06.jsp"><img src="/images/main/foot_m20.jpg" alt="정보공개" /></a></li>
+			<li><a href="/siteinfo/site_02.jsp"><img src="/images/common/foot_m2.gif" alt="이메일주소무단수집거부" /></a></li>
+			<li><a href="/about/campus/campus_tour/kor.html" onkeypress="" onclick="window.open('/about/campus/campus_tour/kor.html','tour','width=990,height=650')" target="_blank" title="캠퍼스 안내"><img src="/images/common/foot_m3.gif" alt="캠퍼스안내" /></a></li>
+			<li><a href="/about/about_06_06.jsp"><img src="/images/common/foot_m4.gif" alt="오시는 길" /></a></li>
+		</ul>
+		<address><img src="/images/common/adress.gif" alt="132-714 서울특별시 도봉구 삼양로 144길 33 대표전화(ARS) 02-901-8000" /></address>
+		<p class="copyright">
+			<img src="/images/common/copyright.gif" alt="Copyright (c) 2007 DUKSUNG WOMEN'S UNIVERSITY, All right reserved." />
+			<a href="mailto:webmaster@duksung.ac.kr"><img src="/images/common/mail.gif" alt="contact us" /></a>
+		</p>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25824031-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<!-- //하단 -->
+
+</body>
+</html>
+			
