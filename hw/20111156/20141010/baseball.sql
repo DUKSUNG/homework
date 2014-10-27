@@ -1,3 +1,5 @@
+drop table baseball;
+
 create table baseball(
 				순위 int AUTO_INCREMENT,
 				팀명 varchar(255),
