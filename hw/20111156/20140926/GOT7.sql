@@ -1,3 +1,5 @@
+drop table GOT7;
+
 create table GOT7 (name varchar(255), age int, blood varchar(255));
 
 insert into GOT7(name, age, blood) values ('JB','22','A');

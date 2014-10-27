@@ -1,6 +1,9 @@
+drop table Drama;
+
 create table Drama (순위 int, 채널 varchar(255), 프로그램 varchar(255), 시청률 int);
 
-/*2014-10-6 시청률*/
+-- 2014-10-6 시청률
+
 
 insert into Drama(순위,채널,프로그램,시청률) values(1,'KBS1','고양이는있다',24);
 insert into Drama(순위,채널,프로그램,시청률) values(2,'KBS2','뻐꾸기둥지',21.2);

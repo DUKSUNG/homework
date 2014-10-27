@@ -1,3 +1,5 @@
+drop table Movie;
+
 create table Movie (제목 varchar(255),관객수 int, 개봉일 int);
 
 

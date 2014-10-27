@@ -1,3 +1,5 @@
+drop table MelonChart;
+
 create table MelonChart (순위 int, 곡명 varchar(255),아티스트 varchar(255));
 
 insert into MelonChart(순위,곡명,아티스트) values (1,'그게 나야','김동률');
