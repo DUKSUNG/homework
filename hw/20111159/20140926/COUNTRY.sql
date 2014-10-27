@@ -1,12 +1,14 @@
-use DB_20111159;
+DROP TABLE COUNTRY;
+
+use DS_20111159;
 
 CREATE TABLE COUNTRY (
-	id INT NOT NULL, --순서
-	name VARCHAR(255) NOT NULL, --국가명
-	language VARCHAR(63) NOT NULL, --언어
-	capital VARCHAR(63) NOT NULL, --수도
-	countrycode INT NOT NULL, --국가코드
-	currency varchar(63) NOT NULL, --화폐
+	id INT,
+	name VARCHAR(255), 
+	language VARCHAR(63), 
+	capital VARCHAR(63), 
+	countrycode INT, 
+	currency varchar(63) 
 );
 
 INSERT into COUNTRY (id, name, language, capital, countrycode, currency) values (1, '대한민국', '한국어', '서울', '82', '원화');

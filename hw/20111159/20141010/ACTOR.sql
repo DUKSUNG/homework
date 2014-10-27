@@ -1,4 +1,6 @@
-use DS_20111159
+drop table ACTOR;
+
+use DS_20111159;
 
 create table ACTOR (
 		id int AUTO_INCREMENT PRIMARY KEY, 
@@ -6,8 +8,8 @@ create table ACTOR (
 		age int, 
 		height float, 
 		bloodtype varchar(255), 
-		agency varchar(255
-	));
+		agency varchar(255)
+	);
 
 insert into ACTOR (name, age,height, bloodtype, agency) values ('소지섭','36','182','O형','피프티원케이');
 

@@ -1,9 +1,11 @@
-use DB_20111159;
+DROP TABLE MOVIE;
+
+use DS_20111159;
 
 CREATE TABLE MOVIE (
-	id INT NOT NULL, --순서
-	title VARCHAR(255) NOT NULL, --제목
-	director VARCHAR(255) NOT NULL, --감독
+	id INT ,
+	title VARCHAR(255) , 
+	director VARCHAR(255)
 );
 
 INSERT into MOVIE (id, title, director) values (1, '겨울왕국', '크리스 벅');

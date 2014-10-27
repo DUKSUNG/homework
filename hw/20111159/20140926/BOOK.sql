@@ -1,10 +1,12 @@
+DROP TABLE BOOK;
+
 use DS_20111159;
 
 CREATE TABLE BOOK (
-	id INT NOT NULL,
-	title VARCHAR(255) NOT NULL,
-	writer VARCHAR(63) NOT NULL,
-	publisher VARCHAR(63) NOT NULL,
+	id INT ,
+	title VARCHAR(255),
+	writer VARCHAR(63),
+	publisher VARCHAR(63),
 	publishingyear INT, 
 	cost INT
 );

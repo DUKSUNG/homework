@@ -1,10 +1,12 @@
-use DB_20111159;
+Drop TABLE SONG;
+
+use DS_20111159;
 
 CREATE TABLE SONG (
-	id INT NOT NULL, --순서
-	artist varchar(255) NOT NULL, --가수
-	title varchar(255) NOT NULL, --제목
-	genre varchar(63) NOT NULL, --장르
+	id INT, 
+	artist varchar(255), 
+	title varchar(255), 
+	genre varchar(63)
 );
 
 INSERT into SONG (id, artist, title, genre) values (1, 'Gotye', 'Somebody that I used to know', 'Pop');
