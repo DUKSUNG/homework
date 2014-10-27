@@ -1,3 +1,4 @@
+drop table PRINT;
 create table PRINT (id INT AUTO_INCREMENT PRIMARY KEY, username varchar(255), usernum int, printdate varchar(255));
 insert into PRINT (username, usernum, printdate) value ('강민정', 20100543, '2014/10/01 16:04:24');
 insert into PRINT (username, usernum, printdate) value ('김소빈', 20120664, '2014/10/01 16:04:34');

@@ -1,3 +1,4 @@
+drop table BOOK;
 create table BOOK (id int AUTO_INCREMENT PRIMARY KEY, title varchar(255), writer varchar(255), publishers varchar(255), publishDate varchar(255));
 insert into BOOK (title, writer, publishers, publishDate) value ('흔들리지 않고 피는 꽃이 어디 있으랴', '도종환', 'RHK', '2014.06.23');
 insert into BOOK (title, writer, publishers, publishDate) value ('딸아, 외로울 때는 시를 읽으렴', '신현림', '걷는나무', '2011.08.12');
