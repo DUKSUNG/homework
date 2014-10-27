@@ -1,3 +1,5 @@
+drop table book;
+
 create table book (
 					순위 int AUTO_INCREMENT,
 					책이름  varchar(255),
