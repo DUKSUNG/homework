@@ -5,7 +5,7 @@ CREATE TABLE NOTICE(
 	separation VARCHAR(50),
 	title VARCHAR(255),
 	writer VARCHAR(50),
-	tiem VARCHAR(15),
+	time VARCHAR(15),
 	hit INT
 	
 );

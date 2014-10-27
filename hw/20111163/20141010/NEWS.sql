@@ -4,7 +4,7 @@ CREATE TABLE NEWS(
 	NO int AUTO_INCREMENT,
 	title varchar(200),
 	press varchar(10),
-	time varachar(25),
+	time varchar(25),
 	primary key (NO)
 );
 

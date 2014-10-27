@@ -16,4 +16,4 @@ insert into MUSIC(rank, title, artist, good) values (27,'야생화','박효신',
 
 update MUSIC set good=34431 where rank=7;
 
-delete from MUSIC where rank 13;
+delete from MUSIC where rank =13;
