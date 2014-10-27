@@ -1,3 +1,4 @@
+drop table MUSIC;
 create table MUSIC ( rank int, title varchar(255), singer varchar(255), album varchar(255), liked int );
 insert into MUSIC ( rank, title, singer, album, liked ) value ( 1, 'Home', '로이킴', 'HOME', 8104);
 insert into MUSIC ( rank, title, singer, album, liked ) value ( 2, '그게 나야', '김동률', '동행', 30603);

@@ -1,3 +1,4 @@
+drop table CYPHERS;
 create table CYPHERS ( id int, name varchar(255), height int, weight int, job varchar(255));
 insert into CYPHERS ( id, name, height, weight, job ) value ( 1, '미아', 155, 45, '거리의 음악가');
 insert into CYPHERS ( id, name, height, weight, job ) value ( 2, '드니스 와이즈 룬데', 177, 51, '삼림감시원. 하지만 숲을 잃었다');

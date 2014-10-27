@@ -1,3 +1,4 @@
+drop table MOVIE;
 create table MOVIE (id int, title varchar(255), netizenPoint float, expertPoint float, genre varchar(255), runningTime int);
 insert into MOVIE ( id, title, netizenPoint, expertPoint, genre, runningTime ) value ( 1, '제보자', 8.63, 6.64, '드라마', 114);
 insert into MOVIE ( id, title, netizenPoint, expertPoint, genre, runningTime ) value ( 2, '슬로우비디오', 7.83, 6.00, '드라마', 106);

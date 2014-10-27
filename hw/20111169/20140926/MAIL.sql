@@ -1,3 +1,4 @@
+drop table MAIL;
 create table MAIL ( id int, sender varchar(255), title varchar(255), date varchar(255), size float );
 insert into MAIL ( id, sender, title, date, size ) values ( 1, 'Won Joo Yoo', '[덕성IVF] 상태 업데이트', '2014-10-05 20:49', 10.21 );
 insert into MAIL ( id, sender, title, date, size ) values ( 2, 'Facebook', '유빈님, 새 알림 2개 및 콕 찔러보기 2개', '2014-10-03 07:00', 18.47 );

@@ -1,3 +1,4 @@
+drop table SOFTWARE;
 create table SOFTWARE ( ranking int, name varchar(255), version float, downlode int, starPoint float );
 insert into SOFTWARE ( ranking, name, version, downlode, starPoint ) value (1, '카카오톡', 2.0, 61353, 2.8 );
 insert into SOFTWARE ( ranking, name, version, downlode, starPoint ) value (2, '고클린', 1.4, 41623, 3.5);
