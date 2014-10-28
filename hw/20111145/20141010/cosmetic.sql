@@ -1,6 +1,6 @@
+drop table cosmetic;
 
-
-use DS_20111145;
+-- use DS_20111145;
 
 create table cosmetic (
 	row_no  int auto_increment,

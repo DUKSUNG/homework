@@ -1,5 +1,5 @@
-
-use DS_20111145;
+drop table books;
+-- use DS_20111145;
 
 create table books (
 	id         int          not null auto_increment,
