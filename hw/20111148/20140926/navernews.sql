@@ -1,3 +1,5 @@
+-- 8주차 과제입니다
+drop table navernews;
 /*2014년 9월 28일 두번째 테이블 navernews*/
 /*1.create*/
 create table navernews (article varchar(255), writer varchar(255), subject varchar(255), time int, comment int);
