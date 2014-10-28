@@ -1,4 +1,5 @@
-use DS_20111145;
+drop table WEBTOON;
+-- use DS_20111145;
 
 create table WEBTOON (
 	no         int          not null,

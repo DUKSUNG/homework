@@ -1,5 +1,5 @@
-
-use DS_20111145;
+drop table SINGER;
+-- use DS_20111145;
 
 create table SINGER (
 	no    int           not null,

@@ -1,5 +1,5 @@
-
-use DS_20111145;
+drop table TIMETABLE;
+-- use DS_20111145;
 
 create table TIMETABLE (
 	no      int          not null,

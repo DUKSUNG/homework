@@ -1,5 +1,5 @@
-use DS_20111145;
-
+-- use DS_20111145;
+drop table DUKSUNG;
 create table DUKSUNG (
 
 
@@ -12,7 +12,7 @@ create table DUKSUNG (
 
 
 insert into DUKSUNG (no, title, writer, wdate, hit) values ('30059', '10월 10일날 쉬는건가요??? 샌드위치라서 쉰다는 얘기가...', 'da********', '2014-09-26', '684'  );
-insert into DUKSUNG (no, title, writer, wdate, hit) values ('30027', 'g3 케이스 오천원 팔아염', 'da********', '2014-09-24'. '8');
+insert into DUKSUNG (no, title, writer, wdate, hit) values ('30027', 'g3 케이스 오천원 팔아염', 'da********', '2014-09-24', '8');
 insert into DUKSUNG (no, title, writer, wdate, hit) values ('29984', '휘트니스 이용시간 변경 안내' , '총무과', '2014-09-23', '147');
 insert into DUKSUNG (no, title, writer, wdate, hit) values ('29953', '수유역스쿨버스대책이시급합니다', 'aa*****', '2014-09-23', '887');
 insert into DUKSUNG (no, title, writer, wdate, hit) values ('29802', '★독일어 프리토킹 수강생 모집', '언어교육원', '2014-09-16', '61');
