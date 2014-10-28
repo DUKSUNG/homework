@@ -3,8 +3,8 @@ use DS_20111150;
 CREATE TABLE PLM (
 	id	INT,
 	subject	VARCHAR(255),
-	star	FLOAT,
-	date	INT,
+	star	FLOAT(4,2),
+	date	INT
 );
 
 INSERT INTO PLM (id, subject, star, date) VALUES (432,'수출의 야망',9.98,20140925);
@@ -19,4 +19,3 @@ UPDATE PLM SET subject='(안녕, 별점 제일 낮은 친구)' WHERE star<9.95;
 
 DELETE FROM PLM WHERE id>=430;
 
-ALTER TABLE PLM MODIFY COLUMN star FLOAT(4,2); --FLOAT형 지정 시 입력값 크기 정보 한정하도록 수정

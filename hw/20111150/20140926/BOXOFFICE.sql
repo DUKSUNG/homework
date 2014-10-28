@@ -4,11 +4,9 @@ CREATE TABLE IF NOT EXISTS BOXOFFICE (
 	rank	INT	NOT NULL, 
 	title	VARCHAR(255)	NOT NULL,
 	basic_date	DATE	NOT NULL,
-	number_of_viers	INT	NOT NULL,
+	number_of_viewers	INT	NOT NULL,
 	share	FLOAT(4,2)	NOT NULL
 );
-
-ALTER TABLE BOXOFFICE CHANGE number_of_viers number_of_viewers INT NOT NULL;
 
 INSERT INTO BOXOFFICE ( rank, title, basic_date, number_of_viewers, share ) VALUES ( 1, '제보자', 20141002, 563529, 24.20);
 INSERT INTO BOXOFFICE ( rank, title, basic_date, number_of_viewers, share ) VALUES ( 2, '슬로우 비디오', 20141002, 546861, 23.10);
