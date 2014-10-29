@@ -1,3 +1,4 @@
+drop table EXO;
 
 create table EXO (age int, name varchar(255), hometown varchar(255));
 

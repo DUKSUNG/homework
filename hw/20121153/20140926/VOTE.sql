@@ -1,6 +1,6 @@
 -- use DS_20121153;
 
-drop table vote;
+drop table VOTE;
 
 CREATE TABLE VOTE ( 
 	section varchar(255), 
