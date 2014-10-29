@@ -1,3 +1,4 @@
+drop table NAVERCAFES;
 create table NAVERCAFES(
 	CAFES_rank	int 			auto_increment,
 	name		varchar(255)	NOT NULL,
@@ -23,7 +24,7 @@ insert into NAVERCAFES values(7,'통나무집 그리고 통기타(통앤통)','�
 
 insert into NAVERCAFES values(8,'이승환 공식 팬클럽 We are the DREAMFACTORY','드림팩토리','2013.06.20',5693,'가수 이승환의 공식 팬클럽');
 
-update NABERCAFES set CAFES_rank=9 where CAFES_rank=8;
+update NAVERCAFES set CAFES_rank=9 where CAFES_rank=8;
 delete from NAVERCAFES where CAFES_rank=4;
 
 

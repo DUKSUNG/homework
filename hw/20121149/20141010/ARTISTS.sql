@@ -1,3 +1,5 @@
+drop table ARTISTS;
+
 create table ARTISTS(
 	ARTISTS_id int auto_increment,
 	name varchar(255) NOT NULL,
