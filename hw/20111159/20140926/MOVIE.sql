@@ -3,8 +3,8 @@ DROP TABLE MOVIE;
 use DS_20111159;
 
 CREATE TABLE MOVIE (
-	id INT ,
-	title VARCHAR(255) , 
+	id INT,
+	title VARCHAR(255), 
 	director VARCHAR(255)
 );
 

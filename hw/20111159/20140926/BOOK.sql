@@ -27,7 +27,7 @@ INSERT into BOOK (id, title, writer, publisher, publishingyear, cost) values (7,
 
 INSERT into BOOK (id, title, writer, publisher, publishingyear, cost) values (8, '이방인', '알베르 카뮈', '민음사', '2011', '9000');
 
-Update BOOK set title='흔들리지 않고 피는 꽃이 어디 있으랴', writer='도종환', publisher='알에이치코리아', publishingyear='2014', cost='10800' where id=4;
+UPDATE BOOK set title='흔들리지 않고 피는 꽃이 어디 있으랴', writer='도종환', publisher='알에이치코리아', publishingyear='2014', cost='10800' where id=4;
 
 DELETE from BOOK where title='이방인';
 

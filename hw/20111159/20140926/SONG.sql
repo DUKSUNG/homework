@@ -6,7 +6,7 @@ CREATE TABLE SONG (
 	id INT, 
 	artist varchar(255), 
 	title varchar(255), 
-	genre varchar(63)
+	genre varchar(255)
 );
 
 INSERT into SONG (id, artist, title, genre) values (1, 'Gotye', 'Somebody that I used to know', 'Pop');

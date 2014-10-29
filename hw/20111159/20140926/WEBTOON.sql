@@ -3,10 +3,10 @@ Drop TABLE WEBTOON;
 use DS_20111159;
 
 CREATE TABLE WEBTOON (
-	id INT , 
+	id INT, 
 	title VARCHAR(255), 
 	writer VARCHAR(63), 
-	grade INT , 
+	grade INT, 
 	portalsite VARCHAR(255), 
 	updatedate VARCHAR(7)
 );
@@ -32,7 +32,7 @@ INSERT into WEBTOON (id, title, writer, grade, portalsite, updatedate) values (9
 
 INSERT into WEBTOON (id, title, writer, grade, portalsite, updatedate) values (10,'프리드로우','전선욱','9','Naver','토요일');
 
-Update WEBTOON set title='용이산다', writer='초', grade='9', portalsite='Naver', updatedate='토요일' where title='스튜디오';
+UPDATE WEBTOON set title='용이산다', writer='초', grade='9', portalsite='Naver', updatedate='토요일' where title='스튜디오';
 
 DELETE from WEBTOON where writer='김달님';
 
