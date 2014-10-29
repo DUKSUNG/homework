@@ -1,3 +1,4 @@
+drop table DRAMAS;
 create table DRAMAS(
 	dramas_rank int,
 	title varchar(255),
