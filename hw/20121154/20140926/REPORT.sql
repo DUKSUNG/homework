@@ -1,9 +1,9 @@
-use DS_20121154;
+drop table REPORT;
 
-1. create
+-- 1. create
 create table REPORT ( year int, semester varchar(255), code int, subject varchar(255), division varchar(255), grade float);
 
-2. insert
+-- 2. insert
 insert into REPORT (year, semester, code, subject, division, grade) values (2012, '1학 기', 005166, '디지털창작기초', '전공선택', 4.5);
 
 insert into REPORT (year, semester, code, subject, division, grade) values (2012, '2학 기', 004869, '컴퓨터개론', '전공선택', 4.0);
@@ -16,10 +16,10 @@ insert into REPORT (year, semester, code, subject, division, grade) values (2014
 
 insert into REPORT (year, semester, code, subject, division, grade) values (2014, '2학 기', 004878, '데이터베이스응용', '전공선택', 4.5);
  
-3. update
-update REPORT set  update REPORT set code=005367, subject='성공취업전략' where code=5175;
+-- 3. update
+update REPORT set code=005367, subject='성공취업전략' where code=5175;
 update REPORT set code=005367, subject='성공취업전략(P/N)' where code=5367;
 
-4. delete 
+-- 4. delete 
 delete from REPORT where code=4869;
 

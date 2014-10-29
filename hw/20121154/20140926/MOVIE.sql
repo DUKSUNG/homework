@@ -1,7 +1,9 @@
-1. create
+drop table MOVIE;
+
+-- 1. create
 create table MOVIE ( rank int, movie varchar(255), date int, audience int, share varchar(20) );
 
-2. insert
+-- 2. insert
  insert into MOVIE (rank, movie, date, audience, share) values (1, '제보자', 20141002, '563,529명', '24.20%');
 
  insert into MOVIE (rank, movie, date, audience, share) values(2, '슬로우 비디오', 20141002, '546,861명', '23.10%');
@@ -12,15 +14,15 @@ create table MOVIE ( rank int, movie varchar(255), date int, audience int, share
 
  insert into MOVIE (rank, movie, date, audience, share) values (5, '마담  뺑덕', 20141002, '207,559명', '9.20%');
 
-3. update
+-- 3. update
  update MOVIE set movie='비긴 어게인', date=20140813, audience='151,972명', share='6.60%' where rank=5;
 
-4. delete
+-- 4. delete
  delete from MOVIE where rank=4;
 
-5. 다시 insert
+-- 5. 다시 insert
  insert into MOVIE (rank, movie, date, audience, share) values (4, '마담  뺑덕', 20141002, '207,559명', '9.20%');
 
-6. 정렬하여 보기 (order by)
+-- 6. 정렬하여 보기 (order by)
  select * from MOVIE order by rank;
 
