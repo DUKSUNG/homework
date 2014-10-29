@@ -1,8 +1,9 @@
-
 #!/usr/bin/python
 #*-* coding: UTF8 -*-
 
-create table 2HYUNHA(num int, name narchar(255), job varchar(255), age int, birth int);
+drop table 2HYUNHA;
+create table 2HYUNHA(num int, name varchar(255), job varchar(255), age int, birth int);
+
 
 insert into 2HYUNHA(num, name, job, age, birth) values (1, '서태지', '가수', 43,0221);
 insert into 2HYUNHA(num, name, job, age, birth) values (2, '유재석', '코미디언', 42, 0814);
@@ -13,9 +14,8 @@ insert into 2HYUNHA(num, name, job, age, birth) values (6, '박태환', '수영�
 
 update 2HYUNHA set job='정치인' where num = 5;
 
-delete from 2HYUNHA where name '김정은';
+delete from 2HYUNHA where name= '김정은';
 
 insert into 2HYUNHA(num,name,job,age,birth) values (5, '오상진', '프리랜서', 35, 0215);
-
 
 
