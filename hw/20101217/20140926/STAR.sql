@@ -1,5 +1,5 @@
 
-STAR table 
+-- STAR table 
 
 
 create table STAR(id int,name varchar(255),age int, work varchar(255));
