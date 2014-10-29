@@ -1,4 +1,3 @@
-
 create table CUSTOMERS(
 		customers_id int(5) not null auto_increment,
 		gender char(1) default '' not null,
