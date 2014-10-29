@@ -1,5 +1,4 @@
-[CREATE] 
- 
+drop table health; 
  
  CREATE TABLE health( 
 	number INT NOT NULL AUTO_INCREMENT, 
@@ -11,7 +10,6 @@
 	 ); 
 	 
 	 
-	 [INSERT] 
 	 
 	 
 	 INSERT INTO health (number, sport, when50kg, when60kg, when70kg) 
@@ -36,7 +34,6 @@
 
 
 
-	 [UPDATE] 
 	 
 	 
 	 UPDATE health SET sport='자전거(보통속도로)'  WHERE number=9; 
@@ -45,7 +42,6 @@
 
 	 
 	 
-	 [DELETE] 
 	 
 	 
 	 DELETE from health where number=7; 
