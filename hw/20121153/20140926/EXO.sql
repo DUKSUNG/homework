@@ -1,4 +1,4 @@
-
+drop table EXO;
 
 
 --[create] 
