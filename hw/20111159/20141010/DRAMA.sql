@@ -3,12 +3,12 @@ DROP table DRAMA;
 use DS_20111159;
 
 CREATE table DRAMA (
-	id int AUTO_INCREMENT PRIMARY KEY, 
-	title varchar(255),                                 
-	broadcaster varchar(255),
-	ratings int, 
-	time int,
-	day varchar(255)
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	title VARCHAR(255),                                 
+	broadcaster VARCHAR(255),
+	ratings INT, 
+	time INT,
+	day VARCHAR(255)
 );
 
 INSERT into DRAMA (title, broadcaster, ratings, time, day) values ('유나의 거리','JTBC','2','9','화요일');
