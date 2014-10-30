@@ -1,4 +1,4 @@
-DS_20101181;
+drop table TVPG;
 
 create table TVPG (day varchar(255), name varchar(255), channel varchar(255), time varchar(10), genre varchar(255));
 
