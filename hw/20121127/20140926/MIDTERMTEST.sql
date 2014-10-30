@@ -1,3 +1,5 @@
+drop table MIDTERMTEST;
+
 use DS_20121127; 
  
  

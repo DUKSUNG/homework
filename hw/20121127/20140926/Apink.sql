@@ -1,4 +1,6 @@
-e DS_20121127; 
+drop table Apink;
+
+use DS_20121127; 
 
  
 create table Apink (name varchar(255), age int, role varchar(255), length int, weight int); 

@@ -1,4 +1,6 @@
-use DS_20121127
+drop table BEER;
+
+use DS_20121127;
 
 create table BEER( name varchar(255), degree int, rank int, favor varchar(255));
 

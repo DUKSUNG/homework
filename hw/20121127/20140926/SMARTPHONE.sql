@@ -1,3 +1,5 @@
+drop table SMARTPHONE;
+
 use DS_20121127;
 
 create table SMARTPHONE ( rank int, name varchar(255), company varchar(255), color varchar(255), size varchar(255));

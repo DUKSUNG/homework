@@ -1,3 +1,5 @@
+drop table COFFEE;
+
 use DS_20121127;
 
 create table COFFEE (name varchar(255), syrup varchar(255), size varchar(255));
