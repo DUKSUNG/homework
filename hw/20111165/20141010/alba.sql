@@ -1,3 +1,5 @@
+drop table alba;
+
 use DS_20111165;
 create table alba(no int auto_increment, area varchar(255), category varchar(255), company varchar(255), pay varchar(128), primary key(no));
 insert into alba(area, category, company, pay) values('강남구 삼성동','서빙/주방','커피빈코리아','5,210원');

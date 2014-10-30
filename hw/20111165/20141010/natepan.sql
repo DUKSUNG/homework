@@ -1,5 +1,8 @@
+
+
 use DS_20111165;
 
+drop table natepan;
 create table natepan(id int auto_increment,category varchar(255),subject varchar(255),username varchar(128), pandate varchar(10),count int,primary key(id));
 
 insert into natepan(id, category, subject, username, pandate, count) values('1004','해석 남/여','갑자기 정떨어지는 여자 특징','남판','2014.10.14','37522');
