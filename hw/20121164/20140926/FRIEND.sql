@@ -1,3 +1,5 @@
+drop table FRIEND;
+
 #*-* coding: UTF8 -*-
 create table FRIEND(id int, name varchar(255),height int);
 insert into FRIEND(id, name, height) values(1,'박예린',167);

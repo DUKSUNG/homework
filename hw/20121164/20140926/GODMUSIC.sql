@@ -1,7 +1,8 @@
-<create>
+drop table GODMUSIC;
+-- <create>
 create table GODMUSIC(track int, title varchar(255), singer varchar(255),writer varchar(255),composer varchar(255));
 
-<insert>
+-- <insert>
 insert into GODMUSIC(track,title,singer,writer,composer) values (1,'그게나야','김동률','김동률','김동률');
 
 insert into GODMUSIC(track,title,singer,writer,composer) values (2,'보통날','GOD','박진영','박진영');
@@ -26,8 +27,8 @@ insert into GODMUSIC(track,title,singer,writer,composer) values (11,'신사의 �
 
 insert into GODMUSIC(track,title,singer,writer,composer) values (12,'미운오리새끼','GOD','데니안','이단옆차기');
 
-<update>
+-- <update>
 update GODMUSIC set singer='GOD feat.메건리' where track=6;
 
-<delete>
+-- <delete>
 delete from GODMUSIC where writer ='김동률';
