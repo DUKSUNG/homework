@@ -1,3 +1,7 @@
+drop table SULBING;
+
+use DS_20121166;
+
 create table SULBING ( Menu varchar(255), Type varchar(255), Price int, Rank int);
 
 insert into SULBING (Menu, Type, Price, Rank) values ('블루베리 치즈설빙', '설빙', '9500', '1');

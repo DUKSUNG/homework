@@ -1,3 +1,7 @@
+drop table TastyRoad;
+
+use DS_20121166;
+
 create table TastyRoad ( Place varchar(255), Name varchar(255), FamousMenu varchar(255), Price int);
 
 insert into TastyRoad (Place, Name, FamousMenu, Price) values ('왕십리', '그릴타이', '타이안심스테이크', '17000');

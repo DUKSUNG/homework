@@ -1,4 +1,9 @@
+drop table Lipstick;
+
+use DS_20121166;
+
 create table Lipstick (Brand varchar(255), Color varchar(255), Capacity varchar(255), Price int);
+
 
 insert into Lipstick (Brand, Color, Capacity, Price) values ('에스쁘아', 'PK0001 N.Y 핑크', '3.7g', '19000');
 insert into Lipstick (Brand, Color, Capacity, Price) values ('샤넬', '138 푸쥬스', '3.5g', '40000');

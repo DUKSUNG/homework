@@ -1,4 +1,9 @@
+drop table Exhibition;
+
+use DS_20121166;
+
 create table Exhibition (제목 varchar(255), 작가 varchar(255), 장소 varchar(255), 일정 varchar(255), 관람료 varchar(255));
+
 
 insert into Exhibition (제목, 작가, 장소, 일정, 관람료) values ('달팽이 걸음', '이건용', '국립현대미술관', '2014.06.24-2014.12.14', '2000원');
 insert into Exhibition (제목, 작가, 장소, 일정, 관람료) values ('뭉크전', '에드바르드 뭉크', '예술의전당 한가람미술관', '2014.07.03-2014.10.12', '15000원');
