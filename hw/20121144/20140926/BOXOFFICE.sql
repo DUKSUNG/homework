@@ -1,6 +1,4 @@
-drop table BOXOFFICE.sql;
-
-use DS_20121144; 
+drop table BOXOFFICE;
 
 
 create table BOXOFFICE(제목 varchar(255), 감독 varchar(255), 점유율 varchar(255), 평점 varchar(255), 주연배우 varchar(255)); 

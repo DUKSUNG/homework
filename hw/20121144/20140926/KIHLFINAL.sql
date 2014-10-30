@@ -1,4 +1,4 @@
-use DS_20121144;
+drop table KIHLFINAL;
 
 create table KIHLFINAL(name varchar(255), team varchar(255), goal int, assist int, school varchar(255));
 
