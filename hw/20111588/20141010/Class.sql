@@ -1,3 +1,5 @@
+drop table Class;
+
 create table Class (classroom int auto_increment, day varchar(255), subject varchar(255), students int, primary key(classroom));
 
 insert into Class values (339, "Friday", "데이터베이스", 33);
