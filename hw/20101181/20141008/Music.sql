@@ -1,4 +1,4 @@
-DS_20101181;
+drop table Music;
 
 create table Music (ranking int, title varchar(255), singer varchar(255), Album varchar(255));
 
