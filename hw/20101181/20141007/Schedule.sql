@@ -1,5 +1,4 @@
-DS_20101181;
-DS_20101181;
+drop table Schedule;
 
 create table Schedule ( subject varchar(255), professor varchar(255), location varchar(255), time varchar(255));
 
