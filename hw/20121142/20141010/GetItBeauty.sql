@@ -1,3 +1,5 @@
+drop table GetItBeauty;
+
 
 create table GetItBeauty (id int AUTO_INCREMENT, Kind varchar(255), TopRankingName varchar(255), Price int, primary key(id)); 
 

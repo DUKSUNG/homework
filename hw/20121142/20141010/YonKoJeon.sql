@@ -1,3 +1,5 @@
+drop table YonKoJeon;
+
 
 create table YonKoJeon (id int AUTO_INCREMENT, event varchar(255), Yonsei_Score int, Korea_Score int, primary key(id)); 
 
