@@ -1,3 +1,5 @@
+drop table MyFamily;
+
 create table MyFamily(name varchar(255), relationship varchar(255), age int, job varchar(255), hobby varchar(255));
 
 insert into MyFamily(name, relationship, age, job, hobby) values('공문선','부',55,'professor','hiking');

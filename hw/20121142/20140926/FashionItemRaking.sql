@@ -1,3 +1,6 @@
+drop table FashionItemRaking;
+
+
 create table FashionItemRaking(rank int, name varchar(255), price int, comment int); 
 
 insert into FashionItemRaking(rank, name, price, comment) values(1, '아디다스 맨투맨 티셔츠', 68310, 9); 

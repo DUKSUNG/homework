@@ -1,3 +1,5 @@
+drop table MOVIE;
+
 create table MOVIE(name varchar(255), grade float, genre varchar(255), main_character varchar(255)); 
  
 insert into MOVIE(name, grade, genre, main_character) values('제보자',8.58,'드라마','박해일,유연석');

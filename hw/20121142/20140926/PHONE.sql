@@ -1,3 +1,4 @@
+drop table PHONE;
 
 create table PHONE(spec varchar(255), galaxy_note3 varchar(255), iphone6 varchar(255), G3 varchar(255));
 

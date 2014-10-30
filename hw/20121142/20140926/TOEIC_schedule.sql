@@ -1,3 +1,5 @@
+drop table TOEIC_schedule;
+
 create table TOEIC_schedule(number int, date varchar(255), application_period varchar(255), additional_period varchar(255), publication_date varchar(255));  
 
 insert into TOEIC_schedule(number, date, application_period, additional_period, publication_date) values(276, '09.28 일', '07.28 월~ 09.01 월', '09.01 월 ~ 09.25 목','10.17 금');
