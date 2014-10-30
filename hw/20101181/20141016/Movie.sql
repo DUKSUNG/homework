@@ -1,4 +1,4 @@
-DS_20101181;
+drop table Movie;
 
 
 create table Movie(m_ranking int auto_increment, 영화제목 varchar(255), 감독 varchar(255), 개봉일 varchar(10), primary key(m_ranking));
