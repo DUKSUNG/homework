@@ -1,8 +1,9 @@
+drop table AsianGameMedal;
 -- 20141014
 -- 소재 : 아시안 게임 메달 순위
 
 -- 1.create
-create table AsianGameMedal (AGRanking int auto_increment, AGName varchar(255),AGGold int, AGSilver int, AGBronze int, AGTotal int,primary key(AGRanking));
+create table AsianGameMedal(AGRanking int auto_increment, AGName varchar(255),	AGGold int,	AGSilver int, AGBronze int,	AGTotal int, primary key(AGRanking));
 
 -- 2.insert
 insert into AsianGameMedal values(1,'중국',50,25,23,98);
