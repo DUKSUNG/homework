@@ -1,3 +1,5 @@
+drop table ThisYearEvent;
+
 create table ThisYearEvent (event varchar(255), month int, day int, explanation varchar(255));
 
 insert into ThisYearEvent (event, month, day, explanation) values ('내생일', 10, 3, '개천절');

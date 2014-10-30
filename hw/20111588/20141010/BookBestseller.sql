@@ -1,3 +1,5 @@
+drop table BookBestseller;
+
 create table BookBestseller (number int not null auto_increment, Name varchar(255), Writer varchar(255), publisher varchar(255), primary key(number));
 
 insert into BookBestseller (Name, Writer, publisher) values ("여자 없는 남자들", "무라카미 하루키", "문학동네");
@@ -8,7 +10,7 @@ insert into BookBestseller (Name, Writer, publisher) values ("그날", "소재�
 
 alter table BookBestseller auto_increment=1;
 
-update BookBsetseller set Writer="히가시노 게이고" where number=3;
+update BookBestseller set Writer="히가시노 게이고" where number=3;
 
 delete from BookBestseller where number=2;
 
