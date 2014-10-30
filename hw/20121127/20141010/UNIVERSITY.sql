@@ -1,3 +1,5 @@
+drop table UNIVERSITY;
+
 use DS_20121127;
  
  

@@ -1,3 +1,5 @@
+drop table BASEBALL;
+
 use DS_20121127;
  
  
