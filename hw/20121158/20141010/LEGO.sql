@@ -1,3 +1,4 @@
+drop table LEGO;
 
 create table LEGO (ID INT AUTO_INCREMENT, NAME VARCHAR(255), GENDER VARCHAR(1), SIZE INT, primary key(ID));
 
