@@ -11,7 +11,7 @@ insert into Musical (Name, Place, Date, VIPPrice) values ('원스', '예술의 �
 insert into Musical (Name, Place, Date, VIPPrice) values ('레베카', '블루스퀘어 삼성전자홀', '14-09-06~14-11-09', 130000);
 
 -- 3.update
-update Muscial set Place='예술의 전당 SI홀' where Name='원스';
+update Musical set Place='예술의 전당 SI홀' where Name='원스';
 
 -- 4,delete
 delete from Muscial where Name='레베카';
