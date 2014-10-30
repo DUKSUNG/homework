@@ -1,4 +1,8 @@
 
+
+drop table FMradio;
+
+
 create table FMradio (
 	rank  INT AUTO_INCREMENT  not null,
 	title  varchar(255) not null,

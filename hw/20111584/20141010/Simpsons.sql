@@ -1,4 +1,8 @@
 
+
+drop table Simpsons;
+
+
 create table Simpsons ( 
 	no INT AUTO_INCREMENT  not null,
     name varchar(40) not null,
