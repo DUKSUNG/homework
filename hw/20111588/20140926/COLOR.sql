@@ -1,3 +1,5 @@
+drop table COLOR;
+
 create table COLOR (EnglishName varchar(255), value int, KoreanName varchar(255));
 
 insert into COLOR (EnglishName, value, KoreanName) values ('Black', 000000, '검정색');

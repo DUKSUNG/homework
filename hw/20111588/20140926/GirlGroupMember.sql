@@ -1,4 +1,6 @@
-create table GirlGroupMember (GroupName varhchar(255), name varchar(255), height int);
+drop table GirlGroupMember;
+
+create table GirlGroupMember (GroupName varchar(255), name varchar(255), height int);
 
 insert into GirlGroupMember (GroupName, name, height) values ('걸스데이', '혜리', 167);
 insert into GirlGroupMember (GroupName, name, height) values ('나인뮤지스', '민하', 170);

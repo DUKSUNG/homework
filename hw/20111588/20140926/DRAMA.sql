@@ -1,3 +1,5 @@
+drop table DRAMA;
+
 create table DRAMA (broadcaster varchar(255), time int, name varchar(255));
 
 insert into DRAMA (broadcaster, time, name) values ('MBC', 9, '왔다장보리');

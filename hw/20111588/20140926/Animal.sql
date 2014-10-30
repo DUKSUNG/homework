@@ -1,3 +1,5 @@
+drop table Animal;
+
 create table Animal (name varchar(255), legs int, sort varchar(255));
 
 insert into Animal (name, legs, sort) values ('토끼', 4, '토끼류');
