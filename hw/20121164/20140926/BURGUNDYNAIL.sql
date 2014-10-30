@@ -1,7 +1,9 @@
-<create>
+drop table BURGUNDYNAIL;
+
+-- <create>
 create table BURGUNDYNAIL(number int, company varchar(255), name varchar(255), price int, comment int);
 
-<insert>
+-- <insert>
 insert into BURGUNDYNAIL(number,company, name, price, comment) values (1,'TOK GEL','버건디레드 네일',12100,44);
 
 insert into BURGUNDYNAIL(number,company, name, price, comment) values (2,'더페이스샵','미드나잇 버건디 네일',5000,65);
@@ -18,8 +20,8 @@ insert into BURGUNDYNAIL(number,company, name, price, comment) values (7,'삼성
 
 insert into BURGUNDYNAIL(number,company, name, price, comment) values (8,'토니모리','벨벳버건디',2000,30);
 
-<update>
+-- <update>
 update BURGUNDYNAIL set name='버건디포이즌' where company='에뛰드하우스';
 
-<delete>
+-- <delete>
 delete from BURGUNDYNAIL where company='삼성';
