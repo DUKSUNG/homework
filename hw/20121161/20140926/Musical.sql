@@ -14,6 +14,6 @@ insert into Musical (Name, Place, Date, VIPPrice) values ('레베카', '블루�
 update Musical set Place='예술의 전당 SI홀' where Name='원스';
 
 -- 4,delete
-delete from Muscial where Name='레베카';
+delete from Musical where Name='레베카';
 
 
