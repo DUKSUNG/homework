@@ -1,4 +1,4 @@
-DS_20101181
+Drop table BestSeller;
 
 create table BestSeller (subject varchar(255), writer varchar(255), company varchar(255), date varchar(10), cost int);
 
