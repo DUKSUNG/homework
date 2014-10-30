@@ -1,4 +1,4 @@
-DS_20101181;
+drop table Wizwid;
 
 create table Wizwid(best_seller int auto_increment, 상품명 varchar(255), 브랜드 varchar(255), 카테고리 varchar(255), 가격 varchar(10), primary key(best_seller));
 
