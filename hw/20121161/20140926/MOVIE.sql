@@ -1,5 +1,6 @@
 drop table MOVIE;
 
+-- Movie에 관한 테이블
 -- 1.create
 create table MOVIE (Title varchar(255), Genre varchar(255), Running_Time int, Age_Limit int, Netizen_Grade int);
 
