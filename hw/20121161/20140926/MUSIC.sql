@@ -1,4 +1,4 @@
--- Music에 관한 table
+-- Music에 관한 table이다
 
 drop table MUSIC;
 
