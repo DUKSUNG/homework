@@ -1,6 +1,5 @@
 drop table Musical;
 
-
 -- 1.create
 create table Musical (Name varchar(255), Place varchar(255), Date varchar(255), VIPPrice int);
 

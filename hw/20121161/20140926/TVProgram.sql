@@ -1,5 +1,4 @@
 -- #TVProgram에 관한 테이블을 작성하였음
-
 drop table TVProgram;
 
 -- 1.create
