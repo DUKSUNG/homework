@@ -1,13 +1,13 @@
-#*-* coding: UTF-8 -*-
 
 
+drop table PinkFloyd;
 
 
---1.create
+-- 1.create
 
 create table PinkFloyd(album varchar(255), track int, title varchar(255), length varchar(128));
 
---2.insert
+-- 2.insert
 
 insert into PinkFloyd(album, track, title, length) values('The Dark Side of the Moon', 4, 'Time', '7:05');
 insert into PinkFloyd(album, track, title, length) values('The Dark Side of the Moon', 5, 'The Great Gig In The Sky', '4:44');
@@ -17,10 +17,10 @@ insert into PinkFloyd(album, track, title, length) values('Wish You Were Here', 
 insert into PinkFloyd(album, track, title, length) values('Animals', 1, 'Pigs (Three Different Ones', '11:28');
 insert into PinkFloyd(album, track, title, length) values('Animals', 2, 'Dogs', '17:06');
 
---3.update
+-- 3.update
 
 update PinkFloyd set title='Pigs (Three Different Ones)' where length='11:28';
 
---4.delete
+-- 4.delete
 
 delete from PinkFloyd where length='17:06';

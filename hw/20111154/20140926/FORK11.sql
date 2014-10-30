@@ -1,13 +1,13 @@
-#*-* coding: UTF-8 -*-
 
 
+drop table FORK11;
 
 
---1.create
+-- 1.create
 
 create table FORK11 (name varchar(255), age int, major varchar(255), bandpart varchar(255), favband varchar(255));
 
---2.insert
+-- 2.insert
 
 insert into FORK11 (name, age, major, bandpart, favband) values('강민영', 24, '디지털미디어', 'Drum', 'System of a Down');
 insert into FORK11 (name, age, major, bandpart, favband) values('안소현', 23, '스페인어', 'Guitar', '갤럭시 익스프레스');
@@ -17,10 +17,10 @@ insert into FORK11 (name, age, major, bandpart, favband) values('이현주', 23,
 insert into FORK11 (name, age, major, bandpart, favband) values('김나라', 23, '통계학', 'Bass', '라이프앤타임');
 insert into FORK11 (name, age, major, bandpart, favband) values('박진영', 27, '심리학', 'Bass', '검정치마');
 
---3.update
+-- 3.update
 
 update FORK11 set favband='쏜애플' where favband='System of a Down';
 
---4.delete
+-- 4.delete
 
 delete from FORK11 where age=27;
