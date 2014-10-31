@@ -1,3 +1,4 @@
+drop table MOVIES;
 create table MOVIES(
 	movies_release varchar(255),
 	title varchar(255),

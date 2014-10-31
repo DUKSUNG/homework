@@ -1,3 +1,4 @@
+drop table RankOfSearch;
 create table RankOfSearch(
 	rank int not null auto_increment,
 	context varchar(255),

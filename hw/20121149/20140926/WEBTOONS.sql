@@ -1,3 +1,4 @@
+drop table WEBTOONS;
 create table WEBTOONS(
 	webtoons_name varchar(255),
 	genra varchar(255),
