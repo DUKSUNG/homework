@@ -1,5 +1,6 @@
 drop table KIHLFINAL;
 
+
 create table KIHLFINAL(name varchar(255), team varchar(255), goal int, assist int, school varchar(255));
 
 insert into KIHLFINAL(name, team, goal, assist, school) values('함정우', 'WAVES', 2, 2, '경희대학교');
