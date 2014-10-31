@@ -1,5 +1,5 @@
 drop table SOCCERPLAYER;
-use DS_20121144;
+
 
 create table SOCCERPLAYER(player_id INT AUTO_INCREMENT, name VARCHAR(255), birth INT, length INT, primary key(player_id));
 
